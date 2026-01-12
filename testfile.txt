@@ -1,0 +1,7 @@
+HOLA PRUEBA TEXTO EDITADO
+Segunda edicion 123
+<<<<<<< HEAD
+Editado new_branch
+=======
+Editado development
+>>>>>>> d25e31a93d3443ef3b745a9267742c252eff92f8
