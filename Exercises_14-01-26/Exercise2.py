@@ -8,9 +8,27 @@ class Complex_numbers:
  def __init__(self,a=0,b=0):
   self.a=a
   self.b=b
- def complex_no(a,b):
-  z=a+b*sp.I
-  print(z)
-  return z
 
-test=Complex_numbers.complex_no(1,2)
+ def __add__(self,other):   
+  a=self.a+other.a
+  b=self.b+other.b
+  return Complex_numbers(a,b)
+    
+ def __sub__(self,other):   
+  a=self.a-other.a
+  b=self.b-other.b
+  return Complex_numbers(a,b)
+
+ def __mul__(self,other):   
+  a=self.a*other.a-self.b*other.b
+  b=self.a*other.b+self.b*other.a
+  return Complex_numbers(a,b)
+
+ def __str__(self):
+  return "{0},{1}".format(self.a, self.b) #"converts" class to a string
+
+test=Complex_numbers(1,2)
+test2=Complex_numbers(4,5)
+
+print(test+test2)
+print(test*test2)
